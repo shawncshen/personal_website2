@@ -1,19 +1,41 @@
 'use client'
 
+import { useState, useEffect } from 'react'
+
 export default function SocialMediaJourneySection() {
+  const [displayedText, setDisplayedText] = useState('')
+  const fullText = 'My Social Media Journey 📸'
+
+  useEffect(() => {
+    let currentIndex = 0
+    let timeoutId: NodeJS.Timeout
+
+    const typeCharacter = () => {
+      if (currentIndex < fullText.length) {
+        setDisplayedText(fullText.substring(0, currentIndex + 1))
+        currentIndex++
+        timeoutId = setTimeout(typeCharacter, 100) // 100ms per character
+      }
+    }
+
+    typeCharacter()
+
+    return () => clearTimeout(timeoutId)
+  }, [])
+
   return (
     <section
       id="social"
       className="w-full bg-white py-12 md:py-20 px-4 md:px-8 lg:px-16"
     >
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 text-center">
-          My Social Media Journey 📸
+          {displayedText}
         </h2>
 
         {/* Content */}
-        <div className="space-y-6 md:space-y-8 text-base md:text-lg leading-relaxed text-gray-800">
+        <div className="space-y-6 md:space-y-8 text-xl md:text-2xl leading-8 text-gray-600 font-serif">
           <p>People often ask me how I blew up on TikTok. Well, this is the story...</p>
 
           <p>
@@ -83,24 +105,21 @@ export default function SocialMediaJourneySection() {
             building one of my own, I want to keep pushing myself with that same determination to succeed.
           </p>
 
-          <p className="italic text-gray-700">
+          <p className="italic text-gray-700 whitespace-nowrap">
             I have a feeling I'll be back on social media soon, and when I do, I'll be sure to update this page :)
           </p>
         </div>
 
         {/* 2x3 Image Grid */}
         <div className="mt-12 md:mt-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24">
             {/* Image 1 - Ring Light */}
             <div className="flex flex-col items-center">
-              <div
-                className="w-full h-64 md:h-56 bg-cover bg-center rounded-lg overflow-hidden mb-4"
-                style={{
-                  backgroundImage: 'url(/images/ringlight.png)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
+              <img
+                src="/images/ringlight.png"
+                alt="my first ring light setup"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+              />
               <p className="text-center text-base md:text-lg text-gray-700">
                 my first ring light setup!
               </p>
@@ -108,76 +127,61 @@ export default function SocialMediaJourneySection() {
 
             {/* Image 2 - Magic Club */}
             <div className="flex flex-col items-center">
-              <div
-                className="w-full h-64 md:h-56 bg-cover bg-center rounded-lg overflow-hidden mb-4"
-                style={{
-                  backgroundImage: 'url(/images/magic-club.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
+              <img
+                src="/images/magic-club.jpg"
+                alt="me and Jaiwon at club fair"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+              />
               <p className="text-center text-base md:text-lg text-gray-700">
-                me and Jaiwon at club fair
+                me and Jaiwon at club fair!
               </p>
             </div>
 
             {/* Image 3 - Magic Summer Teaching */}
             <div className="flex flex-col items-center">
-              <div
-                className="w-full h-64 md:h-56 bg-cover bg-center rounded-lg overflow-hidden mb-4"
-                style={{
-                  backgroundImage: 'url(/images/magic-summer.png)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
+              <img
+                src="/images/magic-summer.png"
+                alt="9th grade me teaching magic at summer camp"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+              />
               <p className="text-center text-base md:text-lg text-gray-700">
-                8th grade me teaching magic at summer camp
+                9th grade me teaching magic at summer camp!
               </p>
             </div>
 
             {/* Image 4 - Follower Demographics */}
             <div className="flex flex-col items-center">
-              <div
-                className="w-full h-64 md:h-56 bg-cover bg-center rounded-lg overflow-hidden mb-4"
-                style={{
-                  backgroundImage: 'url(/images/follower-demo.png)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
+              <img
+                src="/images/follower-demo.png"
+                alt="detailed screenshot of follower demographics"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+              />
               <p className="text-center text-base md:text-lg text-gray-700">
-                detailed screenshot of follower demographics
+                old screenshot of follower demographics lol
               </p>
             </div>
 
             {/* Image 5 - Only Following */}
             <div className="flex flex-col items-center">
-              <div
-                className="w-full h-64 md:h-56 bg-cover bg-center rounded-lg overflow-hidden mb-4"
-                style={{
-                  backgroundImage: 'url(/images/only-following.png)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
+              <img
+                src="/images/only-following.png"
+                alt="TikTok analytics overview"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+              />
               <p className="text-center text-base md:text-lg text-gray-700">
-                TikTok analytics overview
+                me up 5 am not understanding why the video did not hit FYP..
               </p>
             </div>
 
             {/* Image 6 - TikTok Video */}
             <div className="flex flex-col items-center">
-              <div
-                className="w-full h-64 md:h-56 bg-cover bg-center rounded-lg overflow-hidden mb-4"
-                style={{
-                  backgroundImage: 'url(/images/tiktok-video.png)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
-              <p className="text-center text-base md:text-lg text-gray-700">
-                one of my viral TikTok videos
+              <img
+                src="/images/tiktok-video.png"
+                alt="one of my viral TikTok videos"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+              />
+              <p className="text-center text-base md:text-lg text-gray-700 whitespace-nowrap">
+                COOL spinning illusion video! ₍^. .^₎
               </p>
             </div>
           </div>

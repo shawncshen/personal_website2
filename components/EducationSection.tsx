@@ -20,7 +20,7 @@ export default function EducationSection() {
             <div className="flex gap-4 items-start flex-1">
               {/* Georgia Tech Logo */}
               <img
-                src="/images/ga-tech-logo.png"
+                src="/images/gatech-logo.png"
                 alt="Georgia Tech Logo"
                 className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 object-contain"
                 style={{

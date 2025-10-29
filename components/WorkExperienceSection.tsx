@@ -70,9 +70,27 @@ export default function WorkExperienceSection() {
             <div key={index} className="pb-8 md:pb-10 border-b border-gray-200 last:border-b-0">
               {/* Company and Duration */}
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3 md:gap-6 mb-2">
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold">{experience.company}</h3>
-                  <p className="text-gray-600 text-base md:text-lg">{experience.position}</p>
+                <div className="flex gap-4 items-start flex-1">
+                  {/* Company Logo */}
+                  <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                    {experience.company === 'Amazon Web Services (AWS)' && (
+                      <img src="/images/aws-logo.png" alt="AWS" className="w-full h-full object-contain p-2" />
+                    )}
+                    {experience.company === 'Verizon' && (
+                      <img src="/images/verizon-logo.png" alt="Verizon" className="w-full h-full object-contain p-2" />
+                    )}
+                    {experience.company === 'Georgia Tech Medical AI' && (
+                      <img src="/images/gatech-logo.png" alt="Georgia Tech" className="w-full h-full object-contain p-2" />
+                    )}
+                    {experience.company === 'Cisco' && (
+                      <img src="/images/cisco-logo.png" alt="Cisco" className="w-full h-full object-contain p-2" />
+                    )}
+                  </div>
+                  {/* Company Info */}
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-bold">{experience.company}</h3>
+                    <p className="text-gray-600 text-base md:text-lg">{experience.position}</p>
+                  </div>
                 </div>
                 <div className="bg-orange-100 text-orange-800 px-4 py-2 rounded font-semibold text-sm md:text-base whitespace-nowrap h-fit">
                   Duration: {experience.duration}
