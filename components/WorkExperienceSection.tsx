@@ -13,7 +13,7 @@ export default function WorkExperienceSection() {
     {
       company: 'Amazon Web Services (AWS)',
       position: 'Software Development Engineer Intern',
-      duration: 'Jan 2025 - Aug 2025',
+      duration: 'June 2025 - Aug 2025',
       description: [
         'Designed and implemented a high-performance Rust dataset refresh daemon to offload deserialization of 5GB+ droplet .tar.gz metadata archives from the main control plane process, reducing CPU spikes from 70% down to under 2% by linux control group',
         'Built streaming deserialization pipelines to avoid full-memory loads, cutting refresh time by 40% and saving $400K annually by eliminating redundant S3 downloads across distributed hosts',
