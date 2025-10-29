@@ -13,120 +13,114 @@ export default function EducationSection() {
         </h2>
 
         {/* Modern Card Container */}
-        <div
-          className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white"
-          style={{
-            borderTop: '5px solid #B3A369'
-          }}
-        >
-          {/* Content Wrapper */}
-          <div className="flex flex-col lg:flex-row gap-0">
-            {/* Left - Text Info */}
-            <div className="flex-1 p-8 md:p-12 lg:border-r border-gray-200">
-              <h3 className="text-2xl md:text-3xl font-bold mb-2 text-gray-900">
-                Georgia Institute of Technology
-              </h3>
-              <p className="text-lg text-blue-600 font-semibold mb-6">
-                BS in Computer Science (Information Networks & AI)
-              </p>
+        <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white p-8 md:p-12">
+          {/* Top Section - Logo, School Info, and Date */}
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-8 pb-8 border-b border-gray-200">
+            {/* Left - Logo and School Info */}
+            <div className="flex gap-4 items-start flex-1">
+              {/* Georgia Tech Logo */}
+              <img
+                src="/images/ga-tech-logo.png"
+                alt="Georgia Tech Logo"
+                className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 object-contain"
+                style={{
+                  animation: 'slideInLeft 1s ease-out 0.2s both'
+                }}
+              />
 
-              {/* Info Grid */}
-              <div className="space-y-6">
-                {/* GPA */}
-                <div className="pb-6 border-b border-gray-200">
-                  <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold mb-2">
-                    Academic Achievement
-                  </p>
-                  <p className="text-xl font-bold text-gray-900">GPA: 3.8 / 4.0</p>
-                </div>
-
-                {/* Courses */}
-                <div className="pb-6 border-b border-gray-200">
-                  <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold mb-2">
-                    Favorite Courses
-                  </p>
-                  <p className="text-base text-gray-700">
-                    Data Structures & Algorithms, AI, ML, Database, System Networks, C Networking
-                  </p>
-                </div>
-
-                {/* Leadership */}
-                <div className="pb-6 border-b border-gray-200">
-                  <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold mb-2">
-                    Leadership
-                  </p>
-                  <p className="text-base text-gray-700">
-                    CodeTW (Founder & President), HKSA Vice President, Chinese Student Association
-                  </p>
-                </div>
-
-                {/* Extracurricular */}
-                <div className="pb-2">
-                  <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold mb-2">
-                    Extracurricular
-                  </p>
-                  <p className="text-base text-gray-700">
-                    Hacker House Founding Member, AI Researcher, Badminton Club
-                  </p>
-                </div>
-              </div>
-
-              {/* Expected Grad Badge */}
-              <div className="mt-8 inline-block bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-300 text-gray-900 px-6 py-3 rounded-lg font-bold text-base">
-                Expected Grad: Dec 2026
+              {/* School and Degree Info */}
+              <div>
+                <h3 className="text-4xl md:text-4xl font-bold mb-1 text-gray-900">
+                  Georgia Institute of Technology
+                </h3>
+                <p className="text-gray-600 text-lg md:text-xl">
+                  BS in Computer Science (Information Networks & AI)
+                </p>
               </div>
             </div>
 
-            {/* Right - Images Gallery */}
-            <div className="flex-1 p-8 md:p-12">
-              <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold mb-6">
-                Experience Highlights
+            {/* Right - Expected Graduation */}
+            <div className="text-right flex-shrink-0">
+              <p className="text-gray-500 text-base italic">
+                Expected Graduation: Dec 2026
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {/* Image 1 - Study Abroad */}
-                <div className="flex flex-col items-center group cursor-pointer">
-                  <div
-                    className="w-full h-48 bg-cover bg-center rounded-xl overflow-hidden mb-3 transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
-                    style={{
-                      backgroundImage: 'url(/images/study-abroad.jpg)',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
-                  ></div>
-                  <p className="text-center text-sm md:text-base text-gray-600 group-hover:text-gray-900 transition-colors">
-                    Europe Study Abroad
-                  </p>
-                </div>
+            </div>
+          </div>
 
-                {/* Image 2 - Me & Vic */}
-                <div className="flex flex-col items-center group cursor-pointer">
-                  <div
-                    className="w-full h-48 bg-cover bg-center rounded-xl overflow-hidden mb-3 transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
-                    style={{
-                      backgroundImage: 'url(/images/mevic.jpg)',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
-                  ></div>
-                  <p className="text-center text-sm md:text-base text-gray-600 group-hover:text-gray-900 transition-colors">
-                    Badminton Tournament
-                  </p>
-                </div>
+          {/* Bullet Points */}
+          <div className="space-y-5 mb-8">
+            <div className="flex gap-4">
+              <span className="text-gray-900 flex-shrink-0 text-xl">▸</span>
+              <p className="text-lg md:text-xl text-gray-700">
+                <span className="font-bold text-gray-900">Specialization:</span> Intelligence & Information Internetworks
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <span className="text-gray-900 flex-shrink-0 text-xl">▸</span>
+              <p className="text-lg md:text-xl text-gray-700">
+                <span className="font-bold text-gray-900">Relevant Coursework:</span> Data Structures & Algorithms, Object-Oriented Programming, Database Systems, ML
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <span className="text-gray-900 flex-shrink-0 text-xl">▸</span>
+              <div className="text-lg md:text-xl text-gray-700">
+                <p className="mb-2">
+                  <span className="font-bold text-gray-900">Leadership & Activities:</span> CodeTW (Founder & President), HKSA Vice President, Chinese Student Association,
+                </p>
+                <p className="pl-60">Hacker House Founding Member</p>
+              </div>
+            </div>
+          </div>
 
-                {/* Image 3 - HKSA CSA */}
-                <div className="flex flex-col items-center group cursor-pointer">
-                  <div
-                    className="w-full h-48 bg-cover bg-center rounded-xl overflow-hidden mb-3 transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
-                    style={{
-                      backgroundImage: 'url(/images/hksa-csa.jpg)',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
-                  ></div>
-                  <p className="text-center text-sm md:text-base text-gray-600 group-hover:text-gray-900 transition-colors">
-                    Hot Pot Social
-                  </p>
-                </div>
+          {/* Images Gallery */}
+          <div className="pt-8 border-t border-gray-200">
+            <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold mb-6">
+              Fun times at Georgia Tech!
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* Image 1 - Study Abroad */}
+              <div className="flex flex-col items-center group cursor-pointer">
+                <div
+                  className="w-full h-48 bg-cover bg-center rounded-xl overflow-hidden mb-3 transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
+                  style={{
+                    backgroundImage: 'url(/images/study-abroad.jpg)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                ></div>
+                <p className="text-center text-sm md:text-base text-gray-600 group-hover:text-gray-900 transition-colors">
+                  Europe Study Abroad
+                </p>
+              </div>
+
+              {/* Image 2 - Me & Vic */}
+              <div className="flex flex-col items-center group cursor-pointer">
+                <div
+                  className="w-full h-48 bg-cover bg-center rounded-xl overflow-hidden mb-3 transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
+                  style={{
+                    backgroundImage: 'url(/images/mevic.jpg)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                ></div>
+                <p className="text-center text-sm md:text-base text-gray-600 group-hover:text-gray-900 transition-colors">
+                  Badminton Tournament
+                </p>
+              </div>
+
+              {/* Image 3 - HKSA CSA */}
+              <div className="flex flex-col items-center group cursor-pointer">
+                <div
+                  className="w-full h-48 bg-cover bg-center rounded-xl overflow-hidden mb-3 transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
+                  style={{
+                    backgroundImage: 'url(/images/hksa-csa.jpg)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                ></div>
+                <p className="text-center text-sm md:text-base text-gray-600 group-hover:text-gray-900 transition-colors">
+                  Hot Pot Social
+                </p>
               </div>
             </div>
           </div>
