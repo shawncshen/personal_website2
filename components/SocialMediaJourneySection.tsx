@@ -120,7 +120,7 @@ export default function SocialMediaJourneySection() {
                 alt="my first ring light setup"
                 className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
               />
-              <p className="text-center text-base md:text-lg text-gray-700">
+              <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide">
                 my first ring light setup!
               </p>
             </div>
@@ -132,7 +132,7 @@ export default function SocialMediaJourneySection() {
                 alt="me and Jaiwon at club fair"
                 className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
               />
-              <p className="text-center text-base md:text-lg text-gray-700">
+              <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide">
                 me and Jaiwon at club fair!
               </p>
             </div>
@@ -144,7 +144,7 @@ export default function SocialMediaJourneySection() {
                 alt="9th grade me teaching magic at summer camp"
                 className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
               />
-              <p className="text-center text-base md:text-lg text-gray-700">
+              <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide">
                 9th grade me teaching magic at summer camp!
               </p>
             </div>
@@ -156,7 +156,7 @@ export default function SocialMediaJourneySection() {
                 alt="detailed screenshot of follower demographics"
                 className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
               />
-              <p className="text-center text-base md:text-lg text-gray-700">
+              <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide">
                 old screenshot of follower demographics lol
               </p>
             </div>
@@ -168,8 +168,8 @@ export default function SocialMediaJourneySection() {
                 alt="TikTok analytics overview"
                 className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
               />
-              <p className="text-center text-base md:text-lg text-gray-700">
-                me up 5 am not understanding why the video did not hit FYP..
+              <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide">
+                me up 5 am not understanding why the video did not hit fyp..
               </p>
             </div>
 
@@ -180,8 +180,8 @@ export default function SocialMediaJourneySection() {
                 alt="one of my viral TikTok videos"
                 className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
               />
-              <p className="text-center text-base md:text-lg text-gray-700 whitespace-nowrap">
-                COOL spinning illusion video! ₍^. .^₎
+              <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide whitespace-nowrap">
+                cool spinning illusion video! ₍^. .^₎
               </p>
             </div>
           </div>

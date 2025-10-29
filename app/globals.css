@@ -70,3 +70,20 @@ body {
     transform: scale(1.05);
   }
 }
+
+/* Click animation - scale down and back */
+@keyframes clickPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.click-animate:active {
+  animation: clickPulse 0.3s ease-in-out;
+}
