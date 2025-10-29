@@ -62,17 +62,17 @@ export default function HeroSection() {
           MY PERSONAL PORTFOLIO!
         </p>
         <div className="text-sm md:text-base lg:text-lg opacity-75 flex flex-wrap justify-center">
-          <a href="#about" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => e.target.style.color = '#ffffff'} onMouseLeave={(e) => e.target.style.color = '#f0f0f0'}>About Me</a>
+          <a href="#about" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#f0f0f0'}>About Me</a>
           <span className="mx-1 md:mx-2">|</span>
-          <a href="#education" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => e.target.style.color = '#ffffff'} onMouseLeave={(e) => e.target.style.color = '#f0f0f0'}>Education</a>
+          <a href="#education" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#f0f0f0'}>Education</a>
           <span className="mx-1 md:mx-2">|</span>
-          <a href="#work" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => e.target.style.color = '#ffffff'} onMouseLeave={(e) => e.target.style.color = '#f0f0f0'}>Work Experiences</a>
+          <a href="#work" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#f0f0f0'}>Work Experiences</a>
           <span className="mx-1 md:mx-2">|</span>
-          <a href="#social" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => e.target.style.color = '#ffffff'} onMouseLeave={(e) => e.target.style.color = '#f0f0f0'}>My Social Media Journey</a>
+          <a href="#social" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#f0f0f0'}>My Social Media Journey</a>
           <span className="mx-1 md:mx-2">|</span>
-          <a href="#friends" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => e.target.style.color = '#ffffff'} onMouseLeave={(e) => e.target.style.color = '#f0f0f0'}>Friends & Family</a>
+          <a href="#friends" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#f0f0f0'}>Friends & Family</a>
           <span className="mx-1 md:mx-2">|</span>
-          <a href="#expand" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => e.target.style.color = '#ffffff'} onMouseLeave={(e) => e.target.style.color = '#f0f0f0'}>Expand My Journey</a>
+          <a href="#expand" className="hover:opacity-100 hover:underline transition-all" style={{color: '#f0f0f0'}} onMouseEnter={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.currentTarget as HTMLAnchorElement).style.color = '#f0f0f0'}>Expand My Journey</a>
         </div>
       </div>
     </section>
