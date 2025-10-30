@@ -142,6 +142,7 @@ export default function FriendsAndFamilySection() {
                     className="w-full h-full object-contain"
                   />
                 </div>
+                <p className="text-center text-sm text-gray-500 mt-2">my first NBA game!</p>
               </div>
 
               {/* atlmintion.png (below bucketsquad.png) */}
