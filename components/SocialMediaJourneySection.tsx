@@ -15,6 +15,13 @@ export default function SocialMediaJourneySection() {
         setDisplayedText(fullText.substring(0, currentIndex + 1))
         currentIndex++
         timeoutId = setTimeout(typeCharacter, 100) // 100ms per character
+      } else {
+        // Wait 4 seconds before restarting the animation (to reach 5 seconds total)
+        timeoutId = setTimeout(() => {
+          currentIndex = 0
+          setDisplayedText('')
+          typeCharacter()
+        }, 4000)
       }
     }
 
@@ -35,18 +42,18 @@ export default function SocialMediaJourneySection() {
         </h2>
 
         {/* Content */}
-        <div className="space-y-6 md:space-y-8 text-xl md:text-2xl leading-8 text-gray-600 font-serif">
+        <div className="space-y-6 md:space-y-8 text-xl md:text-2xl leading-8 text-black font-serif">
           <p>People often ask me how I blew up on TikTok. Well, this is the story...</p>
 
           <p>
-            Growing up, I loved performing card tricks to people. Seeing their astonished faces when they
+            Growing up, I loved performing card tricks to people. Seeing their astounished faces when they
             witnessed something so seemingly impossible become reality right before their own eyes gave me
             confidence.
           </p>
 
           <p>
             For context, English isn't my first language. When I first immigrated to Georgia from Taiwan, I was
-            unsecure of my accent. Through performing magic tricks, I met a lot of people, which made me
+            insecure of my accent. Through performing magic tricks, I met a lot of people, which made me
             comfortable with public speaking.
           </p>
 
@@ -58,16 +65,18 @@ export default function SocialMediaJourneySection() {
 
           <p>
             But then in 2020, Covid hit. I lost access to my audience, so I decided to showcase my passion online
-            on TikTok. Without much thought, I started posting videos of my tricks 2 to 3 times a day. However,
-            the news and engagement on my account were low. It went on like this for 3 months. I was impatient
+            on TikTok. Without much thought, I started posting videos of my tricks 2 to 5 times a day. However,
+            the views and engagement on my account were low. It went on like this for 3 months. I was impatient
             and frustrated because I hadn't achieved what I wanted. It was then, while scrolling on TikTok, I
             unexpectedly found a video by Gary Vaynerchuk. He had started out owning a wine business then
             later followed his love for influencing and motivational lectures. In his video, I remember so clearly
             him saying,
           </p>
 
-          <p className="italic text-gray-700">
-            "Passion is priceless and does not feel like work. Without hustle, talent will only get you so far."
+          <p>
+            <em className="italic font-medium">
+              "Passion is priceless and does not feel like work. Without hustle, talent will only get you so far."
+            </em>
           </p>
 
           <p>
@@ -82,8 +91,8 @@ export default function SocialMediaJourneySection() {
             worry about the number of views, likes, or any harsh comments I would get. Instead of letting outside
             world's perspective negatively affect me, I made sure I was trusting my own intuition and feelings.
             After months of trials and errors, sending over 100 DMs to successful influencers, my social media
-            presence started to shine. Within 3 years of consistent posting, I had gained <span className="font-semibold">1.6 million followers</span> on
-            TikTok and received multiple sponsorships with companies and groups like Vineroo Watches,
+            presence started to shine. Within 2 years of consistent posting, I had gained <strong className="font-semibold text-gray-900">1.6 million followers</strong> on
+            TikTok and received multiple sponsorships with companies and groups like Vincero Watches,
             Team Wang, FaZe Clan & x-shot collab, and more.
           </p>
 
@@ -105,7 +114,7 @@ export default function SocialMediaJourneySection() {
             building one of my own, I want to keep pushing myself with that same determination to succeed.
           </p>
 
-          <p className="italic text-gray-700 whitespace-nowrap">
+          <p className="text-xl text-center text-gray-800 mt-8 italic">
             I have a feeling I'll be back on social media soon, and when I do, I'll be sure to update this page :)
           </p>
         </div>

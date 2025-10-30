@@ -6,6 +6,7 @@ import AboutMeSection from '@/components/AboutMeSection'
 import EducationSection from '@/components/EducationSection'
 import WorkExperienceSection from '@/components/WorkExperienceSection'
 import SocialMediaJourneySection from '@/components/SocialMediaJourneySection'
+import FriendsAndFamilySection from '@/components/FriendsAndFamilySection'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <EducationSection />
       <WorkExperienceSection />
       <SocialMediaJourneySection />
+      <FriendsAndFamilySection />
     </main>
   )
 }

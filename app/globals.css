@@ -16,6 +16,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  background-color: #ffffff;
 }
 
 /* Text stroke effect for main heading */
@@ -87,3 +88,29 @@ body {
 .click-animate:active {
   animation: clickPulse 0.3s ease-in-out;
 }
+
+/* Section-specific gradient backgrounds */
+#about {
+  background-color: #ffffff;
+}
+
+#education {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 50%, #f5f9ff 100%);
+}
+
+#work {
+  background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+}
+
+#social {
+  background-color: #ffffff;
+}
+
+#friends {
+  background-color: #ffffff;
+}
+
+#expand {
+  background-color: #ffffff;
+}
+

@@ -1,5 +1,7 @@
 'use client'
 
+import { useState, useEffect } from 'react'
+
 interface WorkExperience {
   company: string
   position: string
@@ -9,6 +11,32 @@ interface WorkExperience {
 }
 
 export default function WorkExperienceSection() {
+  const [displayedText, setDisplayedText] = useState('')
+  const fullText = 'Work Experiences'
+
+  useEffect(() => {
+    let currentIndex = 0
+    let timeoutId: NodeJS.Timeout
+
+    const typeCharacter = () => {
+      if (currentIndex < fullText.length) {
+        setDisplayedText(fullText.substring(0, currentIndex + 1))
+        currentIndex++
+        timeoutId = setTimeout(typeCharacter, 100) // 100ms per character for faster typing
+      } else {
+        // Wait 4 seconds before restarting the animation (to reach 5 seconds total)
+        timeoutId = setTimeout(() => {
+          currentIndex = 0
+          setDisplayedText('')
+          typeCharacter()
+        }, 4000)
+      }
+    }
+
+    typeCharacter()
+
+    return () => clearTimeout(timeoutId)
+  }, [])
   const experiences: WorkExperience[] = [
     {
       company: 'Amazon Web Services (AWS)',
@@ -61,7 +89,7 @@ export default function WorkExperienceSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 md:mb-16 text-center">
-          Work Experiences
+          {displayedText}
         </h2>
 
         {/* Work Experiences Cards */}
