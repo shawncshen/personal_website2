@@ -82,11 +82,11 @@ export default function FriendsAndFamilySection() {
           <div className="w-full flex justify-start gap-6 items-start">
             {/* Left Column - movetoUS.png */}
             <div className="flex-shrink-0" style={{ width: '30%' }}>
-              <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-blue-400">
                 <img
-                  src="/images/movetoUS.png"
+                  src="/images/move_to_US.jpg"
                   alt="Moving to the US"
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto object-contain transition-all duration-300"
                 />
               </div>
               <p className="text-center text-sm text-gray-500 mt-2">moving to US!</p>
@@ -96,11 +96,11 @@ export default function FriendsAndFamilySection() {
             <div className="flex flex-col gap-6 flex-shrink-0" style={{ width: '30%' }}>
               {/* 604.png (half height) */}
               <div className="h-1/2">
-                <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 h-full">
+                <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full border-2 border-transparent hover:border-blue-400">
                   <img
                     src="/images/604.png"
                     alt="Unforgettable Classmates"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transition-all duration-300"
                   />
                 </div>
                 <p className="text-center text-sm text-gray-500 mt-2">unforgettable classmates!</p>
@@ -108,11 +108,11 @@ export default function FriendsAndFamilySection() {
 
               {/* ryan.png (below 604.png) */}
               <div>
-                <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-blue-400">
                   <img
                     src="/images/ryan.png"
                     alt="Friends Together"
-                    className="w-full h-auto object-contain"
+                    className="w-full h-auto object-contain transition-all duration-300"
                   />
                 </div>
                 <p className="text-center text-sm text-gray-500 mt-2">me and Ryan eating Thai!</p>
@@ -123,11 +123,11 @@ export default function FriendsAndFamilySection() {
             <div className="flex flex-col gap-6 flex-shrink-0" style={{ width: '35%' }}>
               {/* swiz.png */}
               <div className="h-1/3">
-                <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 h-full">
+                <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full border-2 border-transparent hover:border-blue-400">
                   <img
                     src="/images/swiz.png"
                     alt="Game Day Fun"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transition-all duration-300"
                   />
                 </div>
                 <p className="text-center text-sm text-gray-500 mt-2">study abroad memories at Switzerland 🇨🇭</p>
@@ -135,25 +135,32 @@ export default function FriendsAndFamilySection() {
 
               {/* bucketsquad.png */}
               <div className="h-1/3">
-                <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 h-full">
+                <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full border-2 border-transparent hover:border-blue-400">
                   <img
                     src="/images/bucketsquad.png"
                     alt="Bucket Squad"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transition-all duration-300"
                   />
                 </div>
                 <p className="text-center text-sm text-gray-500 mt-2">my first NBA game!</p>
               </div>
 
               {/* atlmintion.png (below bucketsquad.png) */}
-              <div>
-                <img
-                  src="/images/atlmintion.png"
-                  alt="Badminton"
-                  className="w-full rounded-lg object-contain"
-                  style={{ height: '650px', marginLeft: '60px' }}
-                />
-                <p className="text-center text-sm text-gray-500 mt-2" style={{ marginLeft: '60px' }}>Check out our page: atlminton !</p>
+              <div style={{ marginLeft: '60px' }}>
+                <div
+                  className="rounded-lg overflow-hidden transition-all duration-300 inline-block"
+                  style={{ boxShadow: '0 0 0 0px rgba(96, 165, 250, 0)' } as React.CSSProperties}
+                  onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px rgba(96, 165, 250, 1)'}
+                  onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 0 0px rgba(96, 165, 250, 0)'}
+                >
+                  <img
+                    src="/images/atlmintion.png"
+                    alt="Badminton"
+                    className="block object-contain"
+                    style={{ height: '650px', width: 'auto' }}
+                  />
+                </div>
+                <p className="text-center text-sm text-gray-500 mt-2">Check out our page: atlminton !</p>
               </div>
 
             </div>

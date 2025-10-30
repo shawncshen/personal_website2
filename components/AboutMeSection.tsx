@@ -146,12 +146,20 @@ export default function AboutMeSection() {
           </div>
 
           {/* Right Image */}
-          <div className="flex-1 flex items-center justify-center">
-            <img
-              src="/images/library.jpg"
-              alt="Shawn in library"
-              className="w-4/5 h-auto rounded-lg object-contain"
-            />
+          <div className="flex-1 flex items-center justify-center group">
+            <div className="relative w-4/5">
+              <img
+                src="/images/library.jpg"
+                alt="Shawn in library"
+                className="w-full h-auto rounded-lg object-contain"
+              />
+              <div
+                className="absolute inset-0 rounded-lg pointer-events-none transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+                style={{
+                  background: 'radial-gradient(circle at center, rgba(255, 255, 255, 0) 0%, rgba(173, 216, 230, 0.4) 80%)',
+                }}
+              ></div>
+            </div>
           </div>
         </div>
 
