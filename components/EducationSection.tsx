@@ -71,10 +71,10 @@ export default function EducationSection() {
             {/* Right - Expected Graduation and GPA */}
             <div className="text-right flex-shrink-0">
               <p className="text-gray-500 text-base italic mb-2">
-                Expected Graduation: Dec 2026
+                <span className="font-bold">Expected Graduation:</span> Dec 2026
               </p>
               <p className="text-gray-500 text-base italic">
-                GPA: 3.7
+                <span className="font-bold">GPA:</span> 3.7
               </p>
             </div>
           </div>

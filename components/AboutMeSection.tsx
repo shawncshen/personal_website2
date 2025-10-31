@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { FaLinkedin, FaGithub, FaInstagram, FaTiktok } from 'react-icons/fa'
+import { FiInfo } from 'react-icons/fi'
 
 export default function AboutMeSection() {
   const [displayedText, setDisplayedText] = useState('')
@@ -79,6 +80,10 @@ export default function AboutMeSection() {
                   TEDxTalk
                 </a>
                 {' '}about overcoming self-doubt and achieving your goals!
+              </p>
+              <p className="text-xs md:text-sm text-gray-500 flex items-center gap-2 mt-2">
+                <FiInfo size={14} className="flex-shrink-0" />
+                <span>The audio recording got a little messed up, so if you want to listen comfortably, I recommend wearing headphones!</span>
               </p>
             </div>
 
