@@ -6,7 +6,7 @@ interface WorkExperience {
   company: string
   position: string
   duration: string
-  description: string[]
+  description: (string | JSX.Element)[]
   skills: string
 }
 
@@ -37,14 +37,15 @@ export default function WorkExperienceSection() {
 
     return () => clearTimeout(timeoutId)
   }, [])
+
   const experiences: WorkExperience[] = [
     {
       company: 'Amazon Web Services (AWS)',
       position: 'Software Development Engineer Intern',
       duration: 'June 2025 - Aug 2025',
       description: [
-        'Designed and implemented a high-performance Rust dataset refresh daemon to offload deserialization of 5GB+ droplet .tar.gz metadata archives from the main control plane process, reducing CPU spikes from 70% down to under 2% by linux control group',
-        'Built streaming deserialization pipelines to avoid full-memory loads, cutting refresh time by 40% and saving $400K annually by eliminating redundant S3 downloads across distributed hosts',
+        <>Designed and implemented a high-performance Rust dataset refresh daemon to offload deserialization of 5GB+ droplet .tar.gz metadata archives from the main control plane process, reducing CPU spikes from <strong>70%</strong> down to under <strong>2%</strong> by linux control group</>,
+        <>Built streaming deserialization pipelines to avoid full-memory loads, cutting refresh time by 40% and saving <strong>$400K</strong> annually by eliminating redundant S3 downloads across distributed hosts</>,
       ],
       skills: 'Rust, Java, S3, EC2, EBS, Linux C-Groups, CloudWatch, Git',
     },
@@ -61,7 +62,7 @@ export default function WorkExperienceSection() {
     {
       company: 'Georgia Tech Medical AI',
       position: 'AI Researcher',
-      duration: 'Aug 2024 - Present',
+      duration: 'Aug 2024 - Dec 2025',
       description: [
         'Improved patient outcome prediction accuracy by 15% by training and analyzing 100+ datasets with Python and TensorFlow',
         'Led Agile sprints to streamline MongoDB/MySQL workflows, cutting manual processing by 30% across 5 research teams',
@@ -74,7 +75,7 @@ export default function WorkExperienceSection() {
       duration: 'June 2021 - July 2021',
       description: [
         'Selected out of 600+ applicants to be a part of Cisco\'s Atlanta 2021 Cohort and gained exposure to Cisco\'s core technologies (Meraki, DevNet, AppDynamics), business strategies, and mission.',
-        'Collaborated with 8 individuals across different Cisco locations in the US to design a healthcare app that enhanced patient accessibility during the pandemic; Received 3rd place at the Capstone Project Competition.',
+        <>Collaborated with 8 individuals across different Cisco locations in the US to design a healthcare app that enhanced patient accessibility during the pandemic; Received <strong>3rd place</strong> at the Capstone Project Competition.</>,
         'Engaged in interactive problem-solving workshops with industry leaders on subjects related to Meraki, Cybersecurity, Internet of Things (IoT), and LoRaWAN solutions',
       ],
       skills: 'Meraki, DevNet, AppDynamics',

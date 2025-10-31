@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react'
 export default function SocialMediaJourneySection() {
   const [displayedText, setDisplayedText] = useState('')
   const fullText = 'My Social Media Journey 📸'
+  const [displayedQuote, setDisplayedQuote] = useState('')
+  const quoteText = '"Passion is priceless and does not feel like work. Without hustle, talent will only get you so far."'
 
   useEffect(() => {
     let currentIndex = 0
@@ -26,6 +28,30 @@ export default function SocialMediaJourneySection() {
     }
 
     typeCharacter()
+
+    return () => clearTimeout(timeoutId)
+  }, [])
+
+  useEffect(() => {
+    let currentIndex = 0
+    let timeoutId: NodeJS.Timeout
+
+    const typeQuote = () => {
+      if (currentIndex < quoteText.length) {
+        setDisplayedQuote(quoteText.substring(0, currentIndex + 1))
+        currentIndex++
+        timeoutId = setTimeout(typeQuote, 50) // 50ms per character
+      } else {
+        // Wait 4 seconds before restarting the animation
+        timeoutId = setTimeout(() => {
+          currentIndex = 0
+          setDisplayedQuote('')
+          typeQuote()
+        }, 4000)
+      }
+    }
+
+    typeQuote()
 
     return () => clearTimeout(timeoutId)
   }, [])
@@ -75,7 +101,7 @@ export default function SocialMediaJourneySection() {
 
           <p>
             <em className="italic font-medium">
-              "Passion is priceless and does not feel like work. Without hustle, talent will only get you so far."
+              {displayedQuote}
             </em>
           </p>
 
@@ -87,13 +113,24 @@ export default function SocialMediaJourneySection() {
           </p>
 
           <p>
-            I never had expected my social media passion to turn out this great. I often reminded myself to not
+            I never had expected my social media passion to turn out this great. I consistendly reminded myself to not
             worry about the number of views, likes, or any harsh comments I would get. Instead of letting outside
             world's perspective negatively affect me, I made sure I was trusting my own intuition and feelings.
             After months of trials and errors, sending over 100 DMs to successful influencers, my social media
-            presence started to shine. Within 2 years of consistent posting, I had gained <strong className="font-semibold text-gray-900">1.6 million followers</strong> on
-            TikTok and received multiple sponsorships with companies and groups like Vincero Watches,
-            Team Wang, FaZe Clan & x-shot collab, and more.
+            presence started to shine. Within 2 years of consistent posting, I had gained <strong className="font-semibold text-gray-900">1.4 million followers</strong> on
+            TikTok and received multiple sponsorships with companies and groups like{' '}
+            <a href="https://vincerocollective.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+              Vincero Watches
+            </a>
+            {', '}
+            <a href="https://en.wikipedia.org/wiki/Team_Wang" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+              Team Wang
+            </a>
+            {', '}
+            <a href="https://zurutoys.com/brands/xshot/faze" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+              FaZe Clan & x-shot collab
+            </a>
+            {', and more.'}
           </p>
 
           <p>
@@ -123,11 +160,11 @@ export default function SocialMediaJourneySection() {
         <div className="mt-12 md:mt-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24">
             {/* Image 1 - Ring Light */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center group cursor-pointer">
               <img
                 src="/images/ringlight.png"
                 alt="my first ring light setup"
-                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
               />
               <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide">
                 my first ring light setup!
@@ -135,11 +172,11 @@ export default function SocialMediaJourneySection() {
             </div>
 
             {/* Image 2 - Magic Club */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center group cursor-pointer">
               <img
                 src="/images/magic-club.jpg"
                 alt="me and Jaiwon at club fair"
-                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
               />
               <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide">
                 me and Jaiwon at club fair!
@@ -147,11 +184,11 @@ export default function SocialMediaJourneySection() {
             </div>
 
             {/* Image 3 - Magic Summer Teaching */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center group cursor-pointer">
               <img
                 src="/images/magic-summer.png"
                 alt="9th grade me teaching magic at summer camp"
-                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
               />
               <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide">
                 9th grade me teaching magic at summer camp!
@@ -159,11 +196,11 @@ export default function SocialMediaJourneySection() {
             </div>
 
             {/* Image 4 - Follower Demographics */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center group cursor-pointer">
               <img
                 src="/images/follower-demo.png"
                 alt="detailed screenshot of follower demographics"
-                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
               />
               <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide">
                 old screenshot of follower demographics lol
@@ -171,11 +208,11 @@ export default function SocialMediaJourneySection() {
             </div>
 
             {/* Image 5 - Only Following */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center group cursor-pointer">
               <img
                 src="/images/only-following.png"
                 alt="TikTok analytics overview"
-                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
               />
               <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide">
                 me up 5 am not understanding why the video did not hit fyp..
@@ -183,11 +220,11 @@ export default function SocialMediaJourneySection() {
             </div>
 
             {/* Image 6 - TikTok Video */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center group cursor-pointer">
               <img
                 src="/images/tiktok-video.png"
                 alt="one of my viral TikTok videos"
-                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain"
+                className="w-full h-auto rounded-lg overflow-hidden mb-4 object-contain transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
               />
               <p className="text-center text-xs md:text-sm text-gray-400 lowercase tracking-wide whitespace-nowrap">
                 cool spinning illusion video! ₍^. .^₎

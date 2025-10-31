@@ -68,10 +68,13 @@ export default function EducationSection() {
               </div>
             </div>
 
-            {/* Right - Expected Graduation */}
+            {/* Right - Expected Graduation and GPA */}
             <div className="text-right flex-shrink-0">
-              <p className="text-gray-500 text-base italic">
+              <p className="text-gray-500 text-base italic mb-2">
                 Expected Graduation: Dec 2026
+              </p>
+              <p className="text-gray-500 text-base italic">
+                GPA: 3.7
               </p>
             </div>
           </div>
@@ -87,16 +90,16 @@ export default function EducationSection() {
             <div className="flex gap-4">
               <span className="text-gray-900 flex-shrink-0 text-xl">▸</span>
               <p className="text-lg md:text-xl text-gray-700">
-                <span className="font-bold text-gray-900">Relevant Coursework:</span> Data Structures & Algorithms, Object-Oriented Programming, Database Systems, ML
+                <span className="font-bold text-gray-900">Relevant Coursework:</span> DSA, OOP, Algorithms, Systems and Networks, Linear Algebra, Database, Machine Learning
               </p>
             </div>
             <div className="flex gap-4">
               <span className="text-gray-900 flex-shrink-0 text-xl">▸</span>
               <div className="text-lg md:text-xl text-gray-700">
                 <p className="mb-2">
-                  <span className="font-bold text-gray-900">Leadership & Activities:</span> CodeTW (Founder & President), HKSA Vice President, Chinese Student Association,
+                  <span className="font-bold text-gray-900">Leadership & Activities:</span> CodeTW (Founder & President), Hacker House Founding Member, HKSA Vice President,
                 </p>
-                <p className="pl-60">Hacker House Founding Member</p>
+                <p style={{ paddingLeft: '18ch' }}>Chinese Student Association (Former Dynasty Leader), Badminton Club</p>
               </div>
             </div>
           </div>

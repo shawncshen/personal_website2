@@ -73,8 +73,12 @@ export default function AboutMeSection() {
               <p className="text-base md:text-lg">
                 I love playing basketball and performing card tricks! In high school, I started a magic
                 club, but unfortunately had to shut it down due to Covid. That's when I started to
-                perform on social media. I now have 1.6 million TikTok followers, which eventually led
-                to a TEDxTalk about on media algorithms!
+                perform on social media. I now have 1.4 million TikTok followers, which eventually led
+                to a{' '}
+                <a href="https://www.youtube.com/watch?v=Mpe7X2z2Hcc" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                  TEDxTalk
+                </a>
+                {' '}about overcoming self-doubt and achieving your goals!
               </p>
             </div>
 
